@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 export default function Header(props) {
   return (
@@ -32,6 +33,23 @@ export default function Header(props) {
   </nav>
   )
 }
+
+Header.propTypes ={
+  title: propTypes.string,
+//by writing this in my code it will specify the value of the prop's title should be a string .. If by any chance a number is being visible then it will give error or warning in console window....
+//And with this way  it becomes easy to finding bugs in code .. 
+//It makes our code robust..
+
+/*eg : in App.js 
+ return (
+ <> 
+ <Header title = "My List" searchBar={false}/> </>)
+
+ and here if this My List gets replaced with a number it  will give an error..
+*/
+}
+
+
 
 /*
 { props.searchBar? <form className="d-flex" role="search">
