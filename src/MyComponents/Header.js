@@ -34,8 +34,18 @@ export default function Header(props) {
   )
 }
 
+//Default Props...
+
+Header.defaultProps ={
+  //When user has not entered anything ... (like title) this is by default..
+  title: "Your Title Here..",
+  searchBar: true
+  //If in header file the header's title is not mentioned then this will be visible..
+}
+
 Header.propTypes ={
   title: propTypes.string,
+  searchBar: propTypes.bool.isRequired
 //by writing this in my code it will specify the value of the prop's title should be a string .. If by any chance a number is being visible then it will give error or warning in console window....
 //And with this way  it becomes easy to finding bugs in code .. 
 //It makes our code robust..
