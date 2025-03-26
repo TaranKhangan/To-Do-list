@@ -2,10 +2,10 @@ import React from 'react'
 
 export const TodoItem = ({todo,onDelete}) => {
   return (
-    <div>
-      <h4  className='text-center mb-4'>{todo.title}</h4>
-      <p className='text-center text-warning p-2'>{todo.desc}</p>
-      <button className='btn btn-sm btn-danger'  onClick={()=>{onDelete(todo)}}>Delete</button>
+    <div className='text-center'>
+      <h4  className='text-center fs-4 mb-2'>{todo.title}</h4>
+      <p className='text-center text-secondary fw-bolder p-2'>{todo.desc}</p>
+      <button className='btn btn-sm mb-2 btn-danger'  onClick={()=>{onDelete(todo)}}>Delete</button>
 
 
     </div>
