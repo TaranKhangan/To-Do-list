@@ -1,5 +1,5 @@
 import React from 'react'
-//import './footer.css'
+import './Footer.css'
 
 const Footer = () => {
   let footerStyle ={
@@ -10,10 +10,10 @@ const Footer = () => {
   }
   return (
     <footer>
-    <div className='bg-dark text-light mt-4 p-4' style={footerStyle}>
-      <p className='text-center'>
+    <div className='bg-dark text-center text-light p-4' style={footerStyle}>
+      
         Copyright &copy; MyTodosList.com
-      </p>
+      
       
     </div>
     </footer>
