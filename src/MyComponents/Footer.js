@@ -3,9 +3,9 @@ import './Footer.css'
 
 const Footer = () => {
   let footerStyle ={
-    position : "absolute",
+    position : "relative",
     width: "100%",
-    top: "100vh",
+    top: "10vh",
     border: "2px solid gray"
   }
   return (
