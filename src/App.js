@@ -17,6 +17,23 @@ function App() {
     }))
   }
   //setTodos is a function which will  update the todo everytime
+
+  //+++++++++++++++AddTODO+++++++++++
+  const addTodo=(title,desc)=>{
+    console.log("its taking todos",title, desc);
+    let s_No = todos[todos.length-1].s_No + 1;
+    //to add the new todo at last..
+    const myTodo={
+      s_No: s_No,
+      title:title,
+      desc:desc,
+    }
+    setTodos([...todos, myTodo]);
+    //have made an array so that todos can be set..
+    console.log(myTodo);
+  }
+
+
   const [todos, setTodos]= useState([{
     s_No: 1,
     title: "Complete ur Homework",
@@ -34,7 +51,7 @@ function App() {
   return (
    <>
      <Header title="MyTodosList"/>
-     <AddTodo/>
+     <AddTodo addTodo={addTodo}/>
      <Todos todos={todos} onDelete={onDelete}/>
      <Footer/>
      
