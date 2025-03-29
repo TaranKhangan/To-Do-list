@@ -4,9 +4,18 @@ import Header from "./MyComponents/Header";
 import Todos from "./MyComponents/Todos";
 import Footer from "./MyComponents/Footer";
 import AddTodo from "./MyComponents/AddTodo";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
+  //if null ...
+  let initTodo;
+  if(localStorage.getItem("todos")===null){
+    initTodo =[];
+  }
+  else{
+   initTodo = JSON.parse(localStorage.getItem("todos")) ;
+  }
+    
   const onDelete = (todo)=>{
     console.log('I am ondelete of todo ..', todo);
     //deleting this way will not be accepted by react ..
@@ -14,14 +23,24 @@ function App() {
     //todos.splice(index, 1);
     setTodos(todos.filter((e)=>{
       return e!==todo;
-    }))
+    }));
+
+//when deletion
+    localStorage.setItem("todos",JSON.stringify(todos));
+    
+
   }
   //setTodos is a function which will  update the todo everytime
 
   //+++++++++++++++AddTODO+++++++++++
   const addTodo=(title,desc)=>{
     console.log("its taking todos",title, desc);
-    let s_No = todos[todos.length-1].s_No + 1;
+    let s_No;
+    if(todos.length == 0){
+      s_No = 0;
+    }
+    else{
+     s_No = todos[todos.length-1].s_No + 1;}
     //to add the new todo at last..
     const myTodo={
       s_No: s_No,
@@ -31,10 +50,18 @@ function App() {
     setTodos([...todos, myTodo]);
     //have made an array so that todos can be set..
     console.log(myTodo);
+
   }
 /********** */
 
-  const [todos, setTodos]= useState([{
+  const [todos, setTodos]= useState(initTodo);
+  //when addition
+  useEffect(()=>{
+    localStorage.setItem("todos",JSON.stringify(todos));
+  }, [todos]);
+    
+  
+    /*{
     s_No: 1,
     title: "Complete ur Homework",
     desc: "You have to finish your homework."},
@@ -46,8 +73,10 @@ function App() {
       s_No: 3,
       title: "Complete ur Assignment",
       desc: "You have to finish your assignment."}
+      */
+     //these were for references but now we will pass an empty array to hold the todos..
     
-  ]);
+  
   return (
    <>
      <Header title="MyTodosList"/>

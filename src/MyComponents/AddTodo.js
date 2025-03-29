@@ -10,7 +10,12 @@ const AddTodo = ({addTodo}) => {
     if(!title||!desc){
       alert("Title or Description cannot be blank");
     }
+    else{
     addTodo(title,desc);
+    setTitle("");
+    setDesc("");
+    //beacuse we have used use state ...
+    }
   }
 
   return (
