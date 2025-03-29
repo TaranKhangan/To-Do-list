@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# Readme file for understanding how the sections work like click on one nav title and u reach there with out reloading of pages.
+ReadMe
 # testing
 /coverage
 
