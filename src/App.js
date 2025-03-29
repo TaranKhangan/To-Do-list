@@ -6,6 +6,13 @@ import Footer from "./MyComponents/Footer";
 import AddTodo from "./MyComponents/AddTodo";
 import { useState, useEffect } from 'react';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 function App() {
   //if null ...
   let initTodo;
@@ -79,18 +86,36 @@ function App() {
   
   return (
    <>
+   <Router>
      <Header title="MyTodosList"/>
-     <AddTodo addTodo={addTodo}/>
-     <Todos todos={todos} onDelete={onDelete}/>
+      <Switch>
+      <Route path='/' render={()=>{
+        return(
+          <>
+           <AddTodo addTodo={addTodo}/>
+           <Todos todos={todos} onDelete={onDelete}/>
+          </>
+        )
+      }}>
+        
+        </Route>
+        <Route path='/about'>
+        <About/>
+        </Route>
+
+      </Switch>
+    
+
      <Footer/>
-     
+    </Router>
    </>
   );
 }
 
 export default App;
 
-
+//<Header title="MyTodosList"/>  & <Footer/> hamesha rener ho!!
+//But bich wale na specific time pe hi ho jab slash mera end point ho
 
 
 //searchBar={false} for header props..
