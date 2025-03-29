@@ -32,7 +32,7 @@ function App() {
     //have made an array so that todos can be set..
     console.log(myTodo);
   }
-
+/********** */
 
   const [todos, setTodos]= useState([{
     s_No: 1,
