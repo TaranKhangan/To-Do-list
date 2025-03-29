@@ -4,13 +4,14 @@ import Header from "./MyComponents/Header";
 import Todos from "./MyComponents/Todos";
 import Footer from "./MyComponents/Footer";
 import AddTodo from "./MyComponents/AddTodo";
+import About from "./MyComponents/About";
 import { useState, useEffect } from 'react';
+
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -89,7 +90,7 @@ function App() {
    <Router>
      <Header title="MyTodosList"/>
       <Switch>
-      <Route path='/' render={()=>{
+      <Route exact path='/' render={()=>{
         return(
           <>
            <AddTodo addTodo={addTodo}/>
@@ -97,15 +98,11 @@ function App() {
           </>
         )
       }}>
-        
         </Route>
-        <Route path='/about'>
+        <Route exact path='/about'>
         <About/>
         </Route>
-
       </Switch>
-    
-
      <Footer/>
     </Router>
    </>
@@ -117,6 +114,7 @@ export default App;
 //<Header title="MyTodosList"/>  & <Footer/> hamesha rener ho!!
 //But bich wale na specific time pe hi ho jab slash mera end point ho
 
+//exact path : because it will start matching from the very beginning..
 
 //searchBar={false} for header props..
 
