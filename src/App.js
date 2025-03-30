@@ -10,9 +10,10 @@ import { useState, useEffect } from 'react';
 
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
+
 
 function App() {
   //if null ...
@@ -89,20 +90,19 @@ function App() {
    <>
    <Router>
      <Header title="MyTodosList"/>
-      <Switch>
-      <Route exact path='/' render={()=>{
-        return(
+      <Routes>
+      <Route exact path='/' element={
+        
           <>
            <AddTodo addTodo={addTodo}/>
            <Todos todos={todos} onDelete={onDelete}/>
           </>
-        )
-      }}>
+      }
+      />
+        <Route exact path='/about' element={<About/>}>
+        
         </Route>
-        <Route exact path='/about'>
-        <About/>
-        </Route>
-      </Switch>
+      </Routes>
      <Footer/>
     </Router>
    </>

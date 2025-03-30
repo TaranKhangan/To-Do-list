@@ -1,3 +1,24 @@
 the react routing is used for the features like when u click on about u go the about section when u click help u go to the help section...
 i will make a file with /about and create a separate component folder 
 bina page reload huye..
+=> so way of using it
+* 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+in App.js
+
+ * and use 
+ import {
+  Link,
+  link
+}
+from 'react-router-dom';
+
+* pehle to router k andar wrap krna hai sab
+* then <a> ko <Link> se replace krna hai
+* Aur href= ko to= se krna hai
+* And in latest version of react-router-dom we use <Routes> instead of <Switch>
+
