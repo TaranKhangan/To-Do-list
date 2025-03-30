@@ -31,3 +31,26 @@ from 'react-router-dom';
 //way to do so..
 * when u click on inspect u will see components and profiler tab 
 * and on components  u can see how react app is working
+* and on profiler tab u can see how much time is taken by each component to render
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+And if u want to work for production.. 
+- U have to create a production build,
+- To do so "npm run build".
+- This will create a "build" folder in ur project root directory
+- then open that "build" folder.
+
+(jo build directory teyaar huyi hai , use hum vs code mai open kre gaye aur then index.html open karenge)
+(then open it with live Server)
+(then react app open ho jaygi)
+(then when u look on the top left corner u will see the extension icon and then u can see that u r using a better development enviornment I MEAN : "This pae is using the production build of React.)
+- and open index.html file
+- and u will see that all the code is minified and bundled
+- and u can see that all the code is bundled in one file
+
+
+
+
+
+- U can then host ur app on any server like heroku, netlify, vercel etc
+- U can also use "npm run start" to start ur app in production mode
