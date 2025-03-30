@@ -15,10 +15,7 @@ const Todos = (props) => {
       <h6>{props.todos.length===0? "No todos to display!!":
       props.todos.map((todo)=>{
        return(
-        <>
          <TodoItem todo = {todo} key={todo.s_No} onDelete={props.onDelete}/>
-         <hr/>
-         </>
       )
       })
       }

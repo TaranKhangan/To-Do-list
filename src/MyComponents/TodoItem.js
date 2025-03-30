@@ -2,13 +2,15 @@ import React from 'react'
 
 export const TodoItem = ({todo,onDelete}) => {
   return (
+    
+    <>
     <div>
       <h4  className=' fs-4 mb-2'>{todo.title}</h4>
       <p className='text-secondary fw-bolder p-2'>{todo.desc}</p>
       <button className='btn btn-sm mb-2 btn-danger'  onClick={()=>{onDelete(todo)}}>Delete</button>
-
-
     </div>
+    <hr/>
+    </>
   )
 }
 

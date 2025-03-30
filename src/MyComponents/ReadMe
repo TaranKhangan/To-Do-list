@@ -21,4 +21,13 @@ from 'react-router-dom';
 * then <a> ko <Link> se replace krna hai
 * Aur href= ko to= se krna hai
 * And in latest version of react-router-dom we use <Routes> instead of <Switch>
+* render is not needed in latest verion..
+* we can use <Route> directly in <Routes> and use path and element props
 
+//React Developer Tools... is really useful install it...
+
+//when have to build the app for production .. no direct use... 
+
+//way to do so..
+* when u click on inspect u will see components and profiler tab 
+* and on components  u can see how react app is working

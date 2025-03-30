@@ -45,7 +45,7 @@ function App() {
   const addTodo=(title,desc)=>{
     console.log("its taking todos",title, desc);
     let s_No;
-    if(todos.length == 0){
+    if(todos.length === 0){
       s_No = 0;
     }
     else{
