@@ -1,56 +1,18 @@
-the react routing is used for the features like when u click on about u go the about section when u click help u go to the help section...
-i will make a file with /about and create a separate component folder 
-bina page reload huye..
-=> so way of using it
-* 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-in App.js
+# React Todo List
 
- * and use 
- import {
-  Link,
-  link
-}
-from 'react-router-dom';
+A simple todo app built with React. Add, edit, delete, and mark tasks as done. Data saved in browser (`localStorage`).
 
-* pehle to router k andar wrap krna hai sab
-* then <a> ko <Link> se replace krna hai
-* Aur href= ko to= se krna hai
-* And in latest version of react-router-dom we use <Routes> instead of <Switch>
-* render is not needed in latest verion..
-* we can use <Route> directly in <Routes> and use path and element props
-
-//React Developer Tools... is really useful install it...
-
-//when have to build the app for production .. no direct use... 
-
-//way to do so..
-* when u click on inspect u will see components and profiler tab 
-* and on components  u can see how react app is working
-* and on profiler tab u can see how much time is taken by each component to render
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-And if u want to work for production.. 
-- U have to create a production build,
-- To do so "npm run build".
-- This will create a "build" folder in ur project root directory
-- then open that "build" folder.
-
-(jo build directory teyaar huyi hai , use hum vs code mai open kre gaye aur then index.html open karenge)
-(then open it with live Server)
-(then react app open ho jaygi)
-(then when u look on the top left corner u will see the extension icon and then u can see that u r using a better development enviornment I MEAN : "This pae is using the production build of React.)
-- and open index.html file
-- and u will see that all the code is minified and bundled
-- and u can see that all the code is bundled in one file
+## Features
+- Add / Edit / Delete tasks
+- Mark as complete
+- Persists on refresh
+- Clean UI
 
 
-
-
-
-- U can then host ur app on any server like heroku, netlify, vercel etc
-- U can also use "npm run start" to start ur app in production mode
+## Run Locally
+```bash
+git clone https://github.com/TaranKhangan/To-Do-list.git
+cd To-Do-list
+npm install
+npm start
+Made with 💻 by TaranKhangan
